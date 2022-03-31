@@ -43,6 +43,7 @@ jobs:
     env:
       MyEnv: Hello
     steps:
+      - uses: actions/checkout@v2
       - run: echo $MyEnv && echo $SERVER
         
       
