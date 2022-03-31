@@ -2,6 +2,7 @@ on:
   schedule:
     - cron: '39 9 * * *'
     - cron: '40 9 * * *'
+  push:
 
 jobs:
   test_schedule:
