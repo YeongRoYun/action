@@ -5,7 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: my first step
-        uses: ./.github/actions/my-first-action
+      
+      - name: example
+        uses: ./.github/actions/example.js
       
 
