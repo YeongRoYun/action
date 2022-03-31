@@ -9,7 +9,7 @@ jobs:
     runs-on: "ubuntu-latest"
     steps:
       - name: "Not on Monday or Wednesday"
-        if: github.event.schedule != '39 9 * * *'
+        if: 1 == 2
         run: echo "This step will be skipped on Monday and Wednesday"
       - name: Every time
         run: echo "This step will always run"
