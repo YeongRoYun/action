@@ -1,14 +1,29 @@
-on:
-  push:
-
+name: workflow #.github/workflows/something.yml
+on: #trigger
+	push:
+		branches:
+			- main
+	pull:
+		
 jobs:
-  Test:
-    runs-on: ${{ matrix.os}}
-    strategy:
+	Job-name:
+		runs-on: ${{matrix.os}} #os
+		strategy:
       matrix:
-        os: [ubuntu-18.04, ubuntu-20.04]
-        node: [10, 12, 14]
+        os: [ubuntu-18.04]
+        include:
+          - os: ubuntu-latest
+            node: 15
+            experimental: true
     steps:
-      - uses: actions/setup-node@v2
+      - uses: 'actions/checkout@v2'
+      - uses: 'actions/setup-node@v2'
         with:
-          node-version: ${{ matrix.node }}
+          - node-version: ${{ matrix.node }}
+      - default:
+          run:
+            shell: bash
+            working-directory: ./
+      - name: test
+        run: echo ${npm -v}
+        shell: sh
