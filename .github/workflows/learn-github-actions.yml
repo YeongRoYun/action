@@ -32,10 +32,10 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: ${{matrix.node}}
-      - run: echo ${npm -v} && echo $SHELL
+      - run: echo `npm -v` && echo $SHELL
         shell: bash
       - run: echo $SHELL
-      - run: echo ${pwd}
+      - run: echo `pwd`
       - run: echo $SERVER
   
   myJob2:
