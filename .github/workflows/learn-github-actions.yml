@@ -6,6 +6,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: my first step
-        uses: actions/my-first-action@v1.1.0
+        uses: ./actions/my-first-action
       
 
