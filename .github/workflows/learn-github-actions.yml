@@ -4,5 +4,6 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
+      - name: hello
       - uses: actions/setup-node@v3.0.0
 
