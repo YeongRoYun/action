@@ -1,9 +1,11 @@
 name: learn-github-actions
 on: [push]
 jobs:
-  check-bats-version:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - name: hello my name for you
-        uses: actions/setup-node@v3.0.0
+      - uses: actions/checkout@v2
+      - name: my first step
+        uses: actions/my-first-action@v1.1.0
+      
 
