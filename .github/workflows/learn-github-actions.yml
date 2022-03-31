@@ -1,15 +1,7 @@
 on:
-  schedule:
-    - cron: '39 9 * * *'
-    - cron: '40 9 * * *'
-  push:
-
-jobs:
-  test_schedule:
-    runs-on: "ubuntu-latest"
-    steps:
-      - name: "Not on Monday or Wednesday"
-        if: 1 == 2
-        run: echo "This step will be skipped on Monday and Wednesday"
-      - name: Every time
-        run: echo "This step will always run"
+  workflow_run:
+    workflows: ["learn-github-actions"]
+    types: [requested]
+    branches:
+      - main
+      
